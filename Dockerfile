@@ -12,4 +12,4 @@ RUN npm run build
 
 #Run Steps
 FROM nginx:1.19.8-alpine  
-COPY --from=build-step /app/build /usr/share/nginx/html
+COPY --from=build-step /app/build nginxinc/nginx-unprivileged
